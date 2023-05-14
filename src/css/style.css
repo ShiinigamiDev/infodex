@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url(../fonts/Pokemon\ Solid.ttf) format(truetype);
+}
+@font-face {
+  font-family: "PokemonGba";
+  src: url(../fonts/PokemonGba.ttf) format(truetype);
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-image: url(../imagens/landscape.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body.dark-mode {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+header .logo,
+header .theme-button {
+  width: 40px;
+  transition: 0.2s ease-in-out;
+}
+
+header #theme-button {
+  background: none;
+  border: none;
+}
+
+header .logo:hover,
+header .theme-button:hover,
+main .pokemon-card:hover {
+  border-radius: 25px;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 7px 7px 13px 0px rgba(34, 33, 33, 0.5);
+}
+
+main {
+  padding: 25px;
+}
+
+main .listagem-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+main .pokemon-card {
+  background-image: url(../imagens/bright-theme.png);
+  background-position: center;
+  width: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 15px;
+  transition: 0.2s ease-in-out;
+}
+
+main .pokemon-card:hover {
+  background-color: #fac4f3;
+}
+
+.dark-theme .pokemon-card {
+background-image: url(../imagens/dark-theme.png);
+}
+
+main .pokemon-card .informations {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  font-family: "Pokemon Solid";
+}
+
+main .pokemon-card .informations span {
+  padding: 5px;
+  font-size: 17px;
+}
+
+main .pokemon-card .gif {
+  align-items: center;
+}
+
+main .pokemon-card .types {
+  display: flex;
+  gap: 15px;
+}
+
+main .pokemon-card .types .grass-type,
+.poison-type,
+.fire-type,
+.flying-type,
+.water-type,
+.bug-type {
+  padding: 8px;
+  border-radius: 10px;
+  font-family: 'PokemonGba';
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.grass-type {
+  background-color: #7ac74c;
+}
+
+.poison-type {
+  background-color: #bf67bdfb;
+}
+
+.fire-type {
+  background-color: #ee8130;
+}
+
+.water-type {
+  background-color: #6390f0;
+}
+
+.bug-type {
+  background-color: #a6b91a;
+}
+
+.flying-type {
+  background-color: #bcf7f3;
+}
+main .description {
+  /* background-color: #000000; */
+  border-radius: 10px;
+  max-height: 80px;
+  overflow-y: scroll;
+  font-size: 10px;
+  padding-right: 10px;
+  font-family: "PokemonGba";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
